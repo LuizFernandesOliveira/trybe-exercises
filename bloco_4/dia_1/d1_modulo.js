@@ -1,6 +1,6 @@
-const a = 10
-const b = 5
+const a = 10;
+const b = 5;
 
-const modulo = a % b
+const modulo = a % b;
 
-console.log(modulo)
+console.log(modulo);
