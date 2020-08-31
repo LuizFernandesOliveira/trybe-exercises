@@ -3,7 +3,6 @@
 const pyramidSideSize = 7;
 
 
-if(pyramidSideSize % 2 === 1){
     for(let i = 1; i <= pyramidSideSize; i += 1){
 
         let asteriskNumber = '';
@@ -25,6 +24,3 @@ if(pyramidSideSize % 2 === 1){
         newAsteriskNumber = spaced + asteriskNumber + spaced;
         console.log(newAsteriskNumber);
     }
-}else{
-    console.log('Só é legal fazer com números impares');
-}
