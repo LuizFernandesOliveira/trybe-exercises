@@ -6,4 +6,4 @@ let info = {
 
 info['recorrente'] = 'Sim'
 
-console.log(`Recorrente: ${info['recorrente']}`)
+console.log(info)
