@@ -61,11 +61,14 @@
         })();
         // 4. Crie uma função que corrija o texto da tag <h1>.
         (function updateTextH1(){
-          let square = document.getElementsByTagName("h1")[0];
-          square.innerText = "Exercício 5.1 - JavaScript";
+          let h1 = document.getElementsByTagName("h1")[0];
+          h1.innerText = "Exercício 5.1 - JavaScript";
         })();
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-       
+        (function updateTextP(){
+          let p = document.getElementsByTagName("p")[0];
+          p.style.textTransform = "uppercase";
+        })();
         // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         
     </script>
