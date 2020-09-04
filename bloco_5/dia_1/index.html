@@ -70,7 +70,12 @@
           p.style.textTransform = "uppercase";
         })();
         // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-        
+          (function updateTextP(){
+            let p = document.getElementsByTagName("p");
+            for(let i = 0; i < p.length; i += 1){
+              console.log(p[i].innerText);
+            }
+          })();
     </script>
   </body>
 </html>
