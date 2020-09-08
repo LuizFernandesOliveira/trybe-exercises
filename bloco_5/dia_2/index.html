@@ -88,6 +88,14 @@
         bodyDiv.appendChild(div);
       })();
 
+      const insertPInDivCenter = (() => {
+        let p = document.createElement('p');
+        p.innerText = "Qualquer coisa dentro";
+
+        let divCenter = document.querySelector('.center-content');
+        divCenter.appendChild(p);
+      })();
+
 
     </script>
   </body>
