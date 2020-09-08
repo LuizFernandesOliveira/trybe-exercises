@@ -113,9 +113,19 @@
 
         let divMain = document.querySelector('.main-content');
         divMain.appendChild(div);
-      })
+      })();
 
+      // desafio 7
+      const insertImgInDivLeft = (() => {
+        let img = document.createElement('img');
+        img.className = 'small-image';
+        img.src = 'https://picsum.photos/200';
 
+        let divLeft = document.querySelector('.left-content');
+        divLeft.appendChild(img);
+      })();
+
+      //
     </script>
   </body>
 </html>
