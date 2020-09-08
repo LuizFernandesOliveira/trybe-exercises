@@ -80,7 +80,7 @@
       })();
 
       // desafio 3
-      const insertDivInBodyDiv = (() => {
+      const insertDivCenterInDivMain = (() => {
         let div = document.createElement('div');
         div.className = 'center-content'
 
@@ -88,6 +88,7 @@
         bodyDiv.appendChild(div);
       })();
 
+      // desafio 4
       const insertPInDivCenter = (() => {
         let p = document.createElement('p');
         p.innerText = "Qualquer coisa dentro";
@@ -95,6 +96,24 @@
         let divCenter = document.querySelector('.center-content');
         divCenter.appendChild(p);
       })();
+
+      // desafio 5
+      const insertDivLeftInDivMain = (() => {
+        let div = document.createElement('div');
+        div.className = 'left-content';
+
+        let divMain = document.querySelector('.main-content');
+        divMain.appendChild(div);
+      })();
+
+      // desafio 6
+      const insertDivRightInDivMain = (() => {
+        let div = document.createElement('div');
+        div.className = 'right-content';
+
+        let divMain = document.querySelector('.main-content');
+        divMain.appendChild(div);
+      })
 
 
     </script>
