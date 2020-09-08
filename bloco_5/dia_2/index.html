@@ -61,14 +61,10 @@
 
       // variaveis globais
       let bodyElement = document.querySelector('body');
-      
-      const h1Element = document.createElement('h1');
-
-      const divElement = document.createElement('div');
 
       // desafio 1
       const insertH1InBody = (() => {
-        let h1 = h1Element;
+        let h1 = document.createElement('h1');
 
         h1.innerText = "Exercício 5.2 - JavaScript DOM";
 
@@ -77,10 +73,19 @@
 
       // desafio 2
       const insertDivInBody = (() => {
-        let div = divElement;
+        let div = document.createElement('div');
         div.className = 'main-content';
         
         bodyElement.appendChild(div);
+      })();
+
+      // desafio 3
+      const insertDivInBodyDiv = (() => {
+        let div = document.createElement('div');
+        div.className = 'center-content'
+
+        let bodyDiv = document.querySelector('.main-content');
+        bodyDiv.appendChild(div);
       })();
 
 
