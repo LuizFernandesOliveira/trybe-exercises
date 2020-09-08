@@ -125,7 +125,21 @@
         divLeft.appendChild(img);
       })();
 
-      //
+      // desafio 8
+      const insertUlInDivRight = (() => {
+        let ul = document.createElement('ul');
+
+        const oneTheTem = ['one', 'two', 'three', 'four', 'five', 'six', 'sevem', 'eight', 'nine', 'tem'];
+
+        for(let number of oneTheTem){
+          let li = document.createElement('li');
+          li.innerText = number;
+          ul.appendChild(li);
+        }
+
+        let divRight = document.querySelector('.right-content');
+        divRight.appendChild(ul);
+      })();
     </script>
   </body>
 </html>
