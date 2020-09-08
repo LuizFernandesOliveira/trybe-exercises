@@ -140,6 +140,18 @@
         let divRight = document.querySelector('.right-content');
         divRight.appendChild(ul);
       })();
+
+      // desafio 9
+      const addThreeH3 = (() => {
+        let divMain = document.querySelector('.main-content');
+        for(let i = 0; i < 3; i += 1){
+          let h3 = document.createElement('h3');
+          h3.innerText = `texto ${i}`;
+          divMain.appendChild(h3);
+        }
+
+        console.log(divMain)
+      })();
     </script>
   </body>
 </html>
