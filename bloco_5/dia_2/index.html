@@ -62,10 +62,11 @@
       // variaveis globais
       let bodyElement = document.querySelector('body');
       
-      let h1Element = document.createElement('h1');
+      const h1Element = document.createElement('h1');
+
+      const divElement = document.createElement('div');
 
       // desafio 1
-      
       const insertH1InBody = (() => {
         let h1 = h1Element;
 
@@ -73,6 +74,15 @@
 
         bodyElement.appendChild(h1);
       })();
+
+      // desafio 2
+      const insertDivInBody = (() => {
+        let div = divElement;
+        div.className = 'main-content';
+        
+        bodyElement.appendChild(div);
+      })();
+
 
     </script>
   </body>
