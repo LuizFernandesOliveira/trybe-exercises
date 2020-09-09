@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+
+      // variaveis globais
+      let bodyElement = document.querySelector('body');
+
+      // desafio 1
+      const insertH1InBody = (() => {
+        let h1 = document.createElement('h1');
+
+        h1.innerText = "Exercício 5.2 - JavaScript DOM";
+        h1.className = 'title';
+
+        bodyElement.appendChild(h1);
+      })();
+
+      // desafio 2
+      const insertDivInBody = (() => {
+        let divMain = document.createElement('div');
+        divMain.className = 'main-content';
+        
+        bodyElement.appendChild(divMain);
+      })();
+
+      // desafio 3
+      const insertDivCenterInDivMain = (() => {
+        let divCenter = document.createElement('div');
+        divCenter.className = 'center-content'
+
+        let bodyDiv = document.querySelector('.main-content');
+        bodyDiv.appendChild(divCenter);
+      })();
+
+      // desafio 4
+      const insertPInDivCenter = (() => {
+        let p = document.createElement('p');
+        p.innerText = "Qualquer coisa dentro";
+
+        let divCenter = document.querySelector('.center-content');
+        divCenter.appendChild(p);
+      })();
+
+      // desafio 5
+      const insertDivLeftInDivMain = (() => {
+        let divLeft = document.createElement('div');
+        divLeft.className = 'left-content';
+
+        let divMain = document.querySelector('.main-content');
+        divMain.appendChild(divLeft);
+        
+      })();
+
+      // desafio 6
+      const insertDivRightInDivMain = (() => {
+        let divRight = document.createElement('div');
+        divRight.className = 'right-content';
+
+        let divMain = document.querySelector('.main-content');
+        divMain.appendChild(divRight);
+      })();
+
+      // desafio 7
+      const insertImgInDivLeft = (() => {
+        let img = document.createElement('img');
+        img.className = 'small-image';
+        img.src = 'https://picsum.photos/200';
+
+        let divLeft = document.querySelector('.left-content');
+        divLeft.appendChild(img);
+      })();
+
+      // desafio 8
+      const insertUlInDivRight = (() => {
+        let ul = document.createElement('ul');
+
+        const oneTheTem = ['one', 'two', 'three', 'four', 'five', 'six', 'sevem', 'eight', 'nine', 'tem'];
+
+        for(let number of oneTheTem){
+          let li = document.createElement('li');
+          li.innerText = number;
+          ul.appendChild(li);
+        }
+
+        let divRight = document.querySelector('.right-content');
+        divRight.appendChild(ul);
+      })();
+
+      // desafio 9
+      const addThreeH3 = (() => {
+        let divMain = document.querySelector('.main-content');
+        for(let i = 0; i < 3; i += 1){
+          let h3 = document.createElement('h3');
+          h3.innerText = `texto ${i}`;
+          h3.className = 'description';
+          divMain.appendChild(h3);
+        }
+
+        console.log(divMain)
+      })();
+    </script>
+  </body>
+</html>
