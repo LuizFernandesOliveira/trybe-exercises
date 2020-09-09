@@ -39,11 +39,22 @@
         let button = document.querySelector('#btn');
         button.addEventListener("click", () => {
           alert("Você clicou no botão");
-        })
+        });
 
         //JavaScript para a tarefa 2
+        let productPrice = 59.99;
+        let discount = 0.30;
+        discount = productPrice * discount;
+        window.onload = function(){
+          let btn2 = document.querySelector('#btn2');
+          btn2.addEventListener("click", () => {
+            alert(`Desconto de R$ ${discount}`);
+          });
+        }
+        
         //JavaScript para a tarefa 2
       </script>
+      <button id="btn2">click</button>
       <hr />
       <h2>Bônus</h2>
       <p>
