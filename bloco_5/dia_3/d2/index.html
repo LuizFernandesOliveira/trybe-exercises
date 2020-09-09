@@ -1,0 +1,102 @@
+<! DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset=utf-8 />
+    <title> Calculadora </title>
+  </head>
+
+  <body>
+
+    <label> Quadrar este número:
+      <input type="number" id="square-input" size="2">
+    </label>
+    <button id="square-button"> Calcular </button>
+    <br> <br>
+
+    <label> Metade deste número:
+      <input type="number" id="half-input" size="2">
+    </label>
+    <button id="half-button"> Calcular </button>
+    <br> <br>
+
+    <label>
+      Fração:
+      <input type="number" id="percent1-input" size="2">
+    </label>
+    <label>
+      Todo:
+      <input type="number" id="percent2-input" size="2">
+    </label>
+    <button id="percent-button"> Calcular </button>
+    <br> <br>
+
+    <label> Calcule a área do círculo com o raio:
+      <input type="number" id="area-input" size="2">
+    </label>
+    <button id="area-button"> Calcular </button>
+    <br> <br>
+    <div id="solution"> </div>
+
+    <script>
+      let div = document.querySelector('#solution');
+      const squareNumber = function(num){
+        let number = document.querySelector('#square-input').value;
+        let square = number * number;
+        let result = `O resultado da quadratura do número ${number} é ${square}.`;
+        div.innerHTML = result;
+        return square;
+      }
+
+      const halfNumber = function(num){
+        let number = document.querySelector('#half-input').value;
+        let half = number / 2;
+        let result = `O resultado da divisão do número ${number} é ${half}.`;
+        div.innerHTML = result;
+        return half;
+      }
+
+      const percentOf = function(num1, num2){
+        let number1 = document.querySelector('#percent1-input').value;
+        let number2 = document.querySelector('#percent2-input').value;
+        let min = number2 > number1 ? number1 : number2;
+        let max = number2 > number1 ? number2 : number1;
+
+        let percent = min / max * 100;
+
+        const result = `${min} é ${percent}% de ${max}.`;
+        div.innerHTML = result;
+        return percent;
+      }
+
+      const areaOfCircle = function(light){
+        let lightning = document.querySelector('#area-input').value;
+        let area = lightning * lightning * Math.PI;
+        area = area.toFixed(2);
+        const result = `A área de um círculo com raio ${lightning} é ${area}`;
+        div.innerHTML = result;
+        return area;
+      }
+
+      const myFunction = function(number){
+        let halfNumber = halfNumber(number);
+        let squareNumber = squareNumber(halfNumber);
+        let areaCircle = areaOfCircle(squareNumber);
+        let percent = percentOf(areaCircle);
+      }
+
+      let squareButton = document.querySelector('#square-button');
+      squareButton.addEventListener("click", squareNumber);
+
+      let halfButton = document.querySelector('#half-button');
+      halfButton.addEventListener("click", halfNumber);
+
+      let percentButton = document.querySelector('#percent-button');
+      percentButton.addEventListener("click", percentOf);
+
+      let areaButton = document.querySelector('#area-button');
+      areaButton.addEventListener("click", areaOfCircle);
+    </script>
+  </body>
+
+  </html>
