@@ -31,6 +31,8 @@ const getSelectState = () => document.getElementById('state');
 
 const createOptionSelect = () => document.createElement('option');
 
+const getDateInput = () => document.getElementById('date');
+
 function insertOptionInSelectState(option) {
   let stateSelect = getSelectState();
 
@@ -47,3 +49,4 @@ function createOptions() {
 }
 
 window.onload = createOptions;
+
