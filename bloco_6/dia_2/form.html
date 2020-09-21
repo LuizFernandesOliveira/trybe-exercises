@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Form</title>
+</head>
+<body>
+  <header>
+    <h1>My Trybe Curriculum Form</h1>
+  </header>
+  <form action="" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <legend>Personal Data</legend>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" maxlength="40" id="name" required="required">
+      </div>
+
+      <div>
+        <label for="email">E-mail</label>
+        <input type="text" maxlength="50" id="email" required="required">
+      </div>
+
+      <div>
+        <label for="cpf">CPF</label>
+        <input type="text" maxlength="11" id="cpf" required="required">
+      </div>
+
+      <div>
+        <label for="adress">Adress</label>
+        <input type="text" maxlength="200" id="adress" required="required">
+      </div>
+
+      <div>
+        <label for="state">State</label>
+        <select name="state" id="state"></select>
+      </div>
+
+      <div>
+        <label for="house"><input type="radio" name="tipo" id="house" required="required">House</label>
+        <label for="apartment"><input type="radio" name="tipo" id="apartment" required="required">Apartment</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Last Job</legend>
+      <div>
+        <label for="resume">Curriculum Resume</label>
+        <textarea name="resume" id="resume"></textarea>
+      </div>
+
+      <div>
+        <label for="office">Office</label>
+        <input type="text" id="office" required="required">
+      </div>
+
+      <div>
+        <label for="office-description">Job Description</label>
+        <input type="text"  id="office-description" required="required">
+      </div>
+
+      <div>
+        <label for="date">Date</label>
+        <input type="date" id="date" required="required" >
+      </div>
+    </fieldset>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
