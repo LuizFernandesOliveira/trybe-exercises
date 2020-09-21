@@ -1,6 +1,6 @@
 .torre-grupo-1 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .torre-grupo-2 {
@@ -10,5 +10,5 @@
 
 .torre-grupo-3 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
