@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 function myRemoveWithoutCopy(arr, item) {
   for (let i = 0, len = arr.length; i < len; i += 1) {
     if (arr[i] === item) {
@@ -12,8 +10,4 @@ function myRemoveWithoutCopy(arr, item) {
   return arr;
 }
 
-// implemente seus testes aqui
-assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 4], "error");
-assert.notDeepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 3), [1, 2, 3, 4], "error");
-console.log(myRemoveWithoutCopy([1, 2, 3, 4], 3));
-assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4], "error");
+module.exports = myRemoveWithoutCopy
